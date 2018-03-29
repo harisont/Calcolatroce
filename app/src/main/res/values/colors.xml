@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#b71c1c</color>
     <color name="colorAccent">#ffffff</color>
     <color name="colorBackground">#000000</color>
-    <color name="colorTransflectiveDisplay">#738075</color>
+    <color name="colorOnClick">#212121</color>
 </resources>

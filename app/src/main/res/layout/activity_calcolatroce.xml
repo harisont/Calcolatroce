@@ -10,11 +10,13 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="17dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/colorTransflectiveDisplay"
+        android:background="@color/colorBackground"
         android:gravity="end"
+        android:padding="4dp"
         android:text="0"
+        android:textColor="@color/colorAccent"
         android:textSize="40dp"
         android:typeface="monospace" />
 
@@ -25,29 +27,37 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="7" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="8" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="9" />
 
         <Button
-            android:id="@+id/button30"
+            style="@style/ButtonStyle"
+            android:id="@+id/buttonminus"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:textColor="@color/colorPrimary"
+            android:text="-" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,29 +67,37 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="4" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="5" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="6" />
 
         <Button
-            android:id="@+id/button30"
+            style="@style/ButtonStyle"
+            android:id="@+id/buttondiv"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:textColor="@color/colorPrimary"
+            android:text="/" />
     </LinearLayout>
 
     <LinearLayout
@@ -89,29 +107,37 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="1" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="2" />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="3" />
 
         <Button
-            android:id="@+id/button30"
+            style="@style/ButtonStyle"
+            android:id="@+id/buttonplus"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:textColor="@color/colorPrimary"
+            android:text="+" />
     </LinearLayout>
 
     <LinearLayout
@@ -121,29 +147,38 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/buttondot"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:textColor="@color/colorPrimary"
+            android:text="." />
 
         <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button0"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="0" />
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonsign"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="+-" />
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonby"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="*" />
     </LinearLayout>
 
@@ -154,31 +189,39 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonoff"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="OFF" />
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonc"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="C" />
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonac"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="AC" />
 
         <Button
+            style="@style/ButtonStyle"
             android:id="@+id/buttonequals"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="=" />
     </LinearLayout>
 
