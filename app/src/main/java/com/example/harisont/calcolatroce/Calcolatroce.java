@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,7 +13,6 @@ import java.io.Console;
 
 public class Calcolatroce extends AppCompatActivity implements View.OnClickListener {
     String display = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,18 +50,24 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        boolean isClicked = true;
-        if(isClicked) {
-            v.setBackgroundColor(Color.parseColor("#212121"));
-        }
+        TextView tw = findViewById(R.id.textView);
 
         switch (v.getId()) {
 
+            case R.id.buttonsign:
+                double parsed_display=Double.parseDouble(display);
+                parsed_display = - parsed_display;
+                display = ""+parsed_display;
+                tw.setText(display);
+                break;
             case R.id.buttonac:
-                // do your code
+                display = "";
+                tw.setText("0");
                 break;
             case R.id.buttonc:
-                // do your code
+                if (display.length() > 1) display = display.substring(0, display.length()-1);
+                else if (display.length() == 1) display = "0";
+                tw.setText(display);
                 break;
             case R.id.buttonby:
                 // do your code
@@ -70,7 +76,7 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
                 // do your code
                 break;
             case R.id.buttondot:
-                // do your code
+                writeNumber(".");
                 break;
             case R.id.buttonequals:
                 // do your code
@@ -79,47 +85,47 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
                 // do your code
                 break;
             case R.id.buttonoff:
-                // do your code
+                finish();
                 break;
             case R.id.buttonplus:
                 // do your code
                 break;
             case R.id.button0:
-                display("0");
+                writeNumber("0");
                 break;
             case R.id.button1:
-                display("1");
+                writeNumber("1");
                 break;
             case R.id.button2:
-                display("2");
+                writeNumber("2");
                 break;
             case R.id.button3:
-                display("3");
+                writeNumber("3");
                 break;
             case R.id.button4:
-                display("4");
+                writeNumber("4");
                 break;
             case R.id.button5:
-                display("5");
+                writeNumber("5");
                 break;
             case R.id.button6:
-                display("6");
+                writeNumber("6");
                 break;
             case R.id.button7:
-                display("7");
+                writeNumber("7");
                 break;
             case R.id.button8:
-                display("8");
+                writeNumber("8");
                 break;
             case R.id.button9:
-                display("9");
+                writeNumber("9");
                 break;
             default:
                 break;
         }
     }
 
-    private void display(String d) {
+    private void writeNumber(String d) {
         display += d;
         TextView tw = findViewById(R.id.textView);
         tw.setText(display);
