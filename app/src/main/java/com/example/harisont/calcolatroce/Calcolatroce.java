@@ -13,6 +13,8 @@ import java.io.Console;
 
 public class Calcolatroce extends AppCompatActivity implements View.OnClickListener {
     String display = "";
+    double operand1, operand2, result;
+    String currentOp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.buttonsign:
-                double parsed_display=Double.parseDouble(display);
+                double parsed_display = Double.parseDouble(display);
                 parsed_display = - parsed_display;
                 display = ""+parsed_display;
                 tw.setText(display);
@@ -70,25 +72,30 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
                 tw.setText(display);
                 break;
             case R.id.buttonby:
-                // do your code
+                setOp("*");
                 break;
             case R.id.buttondiv:
-                // do your code
+                setOp("/");
                 break;
             case R.id.buttondot:
                 writeNumber(".");
                 break;
             case R.id.buttonequals:
-                // do your code
+                operand2 = Double.parseDouble(display);
+                if (currentOp == "*") result = operand1 * operand2;
+                else if (currentOp == "+") result = operand1 + operand2;
+                else if (currentOp == "/") result = operand1 / operand2;
+                else if (currentOp == "-") result = operand1 - operand2;
+                tw.setText(result+"");
                 break;
             case R.id.buttonminus:
-                // do your code
+                setOp("-");
                 break;
             case R.id.buttonoff:
                 finish();
                 break;
             case R.id.buttonplus:
-                // do your code
+                setOp("+");
                 break;
             case R.id.button0:
                 writeNumber("0");
@@ -127,6 +134,14 @@ public class Calcolatroce extends AppCompatActivity implements View.OnClickListe
 
     private void writeNumber(String d) {
         display += d;
+        TextView tw = findViewById(R.id.textView);
+        tw.setText(display);
+    }
+
+    private void setOp(String op) {
+        operand1 = Double.parseDouble(display);
+        currentOp = op;
+        display = "";
         TextView tw = findViewById(R.id.textView);
         tw.setText(display);
     }
